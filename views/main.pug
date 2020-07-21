@@ -19,13 +19,16 @@ block content
         input(type='text' name='hashtag' placeholder='태그 검색')
         button.btn 검색
       for twit in twits
+        console.log(twit)
         .twit
-          input.twit-user-id(type='hidden' value=twit.user.id)
+          input.twit-user-id(type='hidden' value=twit.User.id)
           input.twit-id(type='hidden' value=twit.id)
-          .twit-author= twit.user.nick
-          -const follow = user && user.Followings.map(f => f.id).includes(twit.user.id);
-          if user && user.id !== twit.user.id && !follow
+          .twit-author= twit.User.nick
+          -const follow = user && user.Followings.map(f => f.id).includes(twit.User.id);
+          if user && user.id !== twit.User.id && !follow
             button.twit-follow 팔로우하기
+          else if user && user.id !== twit.User.id && follow
+            button.twit-follow 팔로우 취소
           .twit-content= twit.content
           if twit.img
             .twit-img
