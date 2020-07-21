@@ -1,5 +1,10 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; }
+#main {
+  color: white;
+  float: right;
+  font-size: 12px;
+}
 .btn {
   display: inline-block;
   padding: 0 5px;
@@ -103,7 +108,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
   margin-bottom: 10px;
 }
 .twit-author { display: inline-block; font-weight: bold; margin-right: 10px; }
-.twit-follow {
+.twit-follow, .twit-unfollow, .like, .unlike {
   padding: 1px 5px;
   background: #fff;
   border: 1px solid silver;
@@ -114,6 +119,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
 }
 .twit-img { text-align: center; }
 .twit-img img { max-width: 75%; }
+.delete { float: right; }
 .error-message { color: red; font-weight: bold; }
 #search-form { text-align: right; }
 #join-form { padding: 10px; text-align: center; }
