@@ -5,13 +5,19 @@ const { User, Post } = require('../models');
 
 router.get('/', (req, res, next) => {
     Post.findAll({
-        include: {
+        include: [{
             model: User,
             attributes: ['id', 'nick']
-        },
+        }, {
+            model: User,
+            attributes: ['id', 'nick'],
+            as: 'Liker'
+        }],
         order: [['createdAt', 'DESC']],
     })
         .then((posts) => {
+            // console.log('=====');
+            // console.log('posts:', posts);
             res.render('main', {
                 title: 'NodeBird',
                 twits: posts,
@@ -22,7 +28,7 @@ router.get('/', (req, res, next) => {
         .catch((error) => {
             console.error(error);
             next(error);
-        });    
+        });
 });
 
 router.get('/profile', isLoggedIn, (req, res, next) => {
