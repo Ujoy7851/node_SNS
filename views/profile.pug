@@ -2,13 +2,22 @@ extends layout
 
 block content
   .timeline
-    .followings.half
-      h2 팔로잉 목록
-      if user.Followings
-        for following in user.Followings
-          div= following.nick
-    .followers.half
-      h2 팔로워 목록
-      if user.Followers
-        for follower in user.Followers
-          div= follower.nick
+    div
+      a(href='/') 메인으로
+    .half
+      h2 프로필
+      div
+        b 이메일
+        div= user.email
+      div
+        b 닉네임
+        div= user.nick
+      div
+        b 가입일
+        -const createdAt = String.prototype.split.apply(user.createdAt, [' ']).slice(0, 5).join(' ')
+        div= createdAt
+    .half
+      h2 프로필 수정
+      form#nickname-form(action='/user/profile' method='post')
+        input(type='text' name='nick' placeholder='수정할 닉네임')
+        button.btn 수정

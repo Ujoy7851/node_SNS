@@ -9,6 +9,7 @@ router.get('/', (req, res, next) => {
             model: User,
             attributes: ['id', 'nick']
         },
+        order: [['createdAt', 'DESC']],
     })
         .then((posts) => {
             res.render('main', {
