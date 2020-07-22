@@ -150,7 +150,7 @@ block content
           var userId = tag.parentNode.querySelector('.twit-user-id').value;
           var twitId = tag.parentNode.querySelector('.twit-id').value;
           var myId = isLoggedIn.value;
-          if (userId == myId) {
+          if (userId === myId) {
             if (confirm('삭제하시겠습니까?')) {
               var xhr = new XMLHttpRequest();
               xhr.onload = function () {
@@ -160,7 +160,7 @@ block content
                   console.error(xhr.responseText);
                 }
               };
-              xhr.open('DELETE', '/post/' + twitId + '/delete');
+              xhr.open('DELETE', '/post/' + twitId);
               xhr.send();
             }
           }

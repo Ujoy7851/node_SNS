@@ -101,9 +101,9 @@ router.post('/:id/unlike', async (req, res, next) => {
     }
 });
 
-router.delete('/:id/delete', async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
     try {
-        await Post.destroy({ where: { id: req.params.id } });
+        await Post.destroy({ where: { id: req.params.id, userId: req.user.id } });
         res.send('OK');
     } catch(error) {
         console.error(error);
