@@ -13,7 +13,7 @@ html, body { margin: 0; padding: 0; height: 100%; }
   border-radius: 4px;
   background: white;
   border: 1px solid silver;
-  color: crimson;
+  color: slateblue;
   height: 37px;
   line-height: 37px;
   vertical-align: top;
@@ -50,7 +50,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
   margin-right: 10px;
   border-radius: 4px;
   border: 1px solid silver;
-  background: lightcoral;
+  background: lightblue;
 }
 .follow {
   text-align: left;
@@ -65,7 +65,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
   color: white;
 }
 .user-name { font-weight: bold; font-size: 18px; }
-.count { font-weight: bold; color: crimson; font-size: 18px; float: right; padding-right: 10px; }
+.count { font-weight: bold; color: slateblue; font-size: 18px; float: right; padding-right: 10px; }
 .timeline {
   margin-top: 10px;
   width: 100%;
@@ -77,7 +77,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
 #twit-form {
   border-bottom: 1px solid silver;
   padding: 10px;
-  background: lightcoral;
+  background: lightblue;
   overflow: hidden;
 }
 #img-preview { max-width: 100%; }
@@ -85,9 +85,9 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
   float: left;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid crimson;
+  border: 1px solid slateblue;
   padding: 0 10px;
-  color: white;
+  color: slateblue;
   font-size: 12px;
   height: 37px;
   line-height: 37px;
@@ -97,7 +97,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
 #twit-btn {
   float: right;
   color: white;
-  background: crimson;
+  background: slateblue;
   border: none;
 }
 .twit {
@@ -108,12 +108,12 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
   margin-bottom: 10px;
 }
 .twit-author { display: inline-block; font-weight: bold; margin-right: 10px; }
-.twit-follow, .twit-unfollow, .like, .unlike {
+.twit-follow, .twit-unfollow, .like, .unlike, .delete {
   padding: 1px 5px;
   background: #fff;
   border: 1px solid silver;
   border-radius: 5px;
-  color: crimson;
+  color: slateblue;
   font-size: 12px;
   cursor: pointer;
 }
