@@ -4,6 +4,14 @@ const path = require('path');
 const { Post, Hashtag, User } = require('../models');
 const router = express.Router();
 const { isLoggedIn } = require('./middlewares');
+const fs = require('fs');
+
+fs.readdir('uploads', (error) => {
+  if (error) {
+    console.error('uploads 폴더가 없어 uploads 폴더를 생성합니다.');
+    fs.mkdirSync('uploads');
+  }
+});
 
 const upload = multer({
     storage: multer.diskStorage({
