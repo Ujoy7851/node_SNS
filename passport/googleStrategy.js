@@ -6,7 +6,7 @@ module.exports = (passport) => {
   passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-    callbackURL: '/auth/google/callback'
+    callbackURL: 'http://instance-1.asia-northeast3-a.c.nodebird-284718.internal.com/auth/google/callback'
   }, async (accessToken, refreshToken, profile, cb) => {
     try {
       const { id, _json: { name, email }} = profile;
