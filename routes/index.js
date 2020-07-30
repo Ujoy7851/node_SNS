@@ -16,8 +16,8 @@ router.get('/', (req, res, next) => {
         order: [['createdAt', 'DESC']],
     })
         .then((posts) => {
-            // console.log('=====');
-            // console.log('posts:', posts);
+            console.log('=====');
+            console.log('posts:', posts);
             res.render('main', {
                 title: 'NodeBird',
                 twits: posts,

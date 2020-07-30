@@ -1,5 +1,6 @@
 const local = require('./localStrategy');
 const kakao = require('./kakaoStrategy');
+const google = require('./googleStrategy');
 const { User } = require('../models');
 
 // const users = {};
@@ -35,4 +36,5 @@ module.exports = (passport) => {
 
     local(passport);
     kakao(passport);
+    google(passport);
 }
